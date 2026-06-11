@@ -17,7 +17,7 @@ servidor_central = []
 contador_projetos = 1
 
 tipos_iniciais = ["Graduação", "Pós-Graduação", "Professor"]
-for _ in range(20):
+for _ in range(35):
     tipo = random.choice(tipos_iniciais)
     servidor_central.append((PRIORIDADES[tipo], contador_projetos, tipo))
     contador_projetos += 1
@@ -121,7 +121,7 @@ def usuario_laboratorio(nome_usuario, tipo_usuario):
 
 if __name__ == "__main__":
     with open(ARQUIVO_LOG, "w", encoding="utf-8") as f:
-        f.write("=== LOG DE OPERAÇÕES - LABORATÓRIO 3D (COM PRIORIDADES REAIS) ===\n")
+        f.write("=== LOG DE OPERAÇÕES - LABORATÓRIO 3D ===\n")
         
     registrar_log("Iniciando sistema de gerenciamento do laboratório 3D...")
     
@@ -132,9 +132,12 @@ if __name__ == "__main__":
         ("Professor 1", "Professor"),
         ("Professor 2", "Professor"),
         ("Aluno Pós 1", "Pós-Graduação"),
+        ("Aluno Pós 2", "Pós-Graduação"),
         ("Estudante Grad 1", "Graduação"),
         ("Estudante Grad 2", "Graduação"),
-        ("Estudante Grad 3", "Graduação")
+        ("Estudante Grad 3", "Graduação"),
+        ("Estudante Grad 4", "Graduação"),
+        ("Estudante Grad 5", "Graduação")
     ]
     
     threads_usuarios = []
